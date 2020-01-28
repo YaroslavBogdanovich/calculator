@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Калькулятор</title>
+    <script src="calculator.js" defer></script>
+  <!-- Cтиль не применяется ни через линк ни чере style -->
+    <link href="calcStyle.css">
+  <style>
+    /* стиль для кнопок*/
+  .btn {
+    width: 60px;
+    height: 60px;
+    background: rgb(45, 63, 230);
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    user-select: none;
+    border-radius: 25px;
+}
+/*Наведение на кнопку*/
+.btn:hover {
+    background: rgb(235, 25, 25);
+    color: rgb(199, 210, 224);
+}
+/*Задний фон*/
+#calc-wrap {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background: rgb(158, 147, 223);
+}
+/*Стиль самого калькулятора*/
+#calc {
+    width: 240px;
+    display: inline-block;
+}
+/*стиль для поля ввода*/
+#inputVal {
+    width: 97%;
+    border: 0;
+    font-size: 16px;
+    resize: vertical;
+    border-radius: 15px;
+}
+</style>
+</head>
+<body onload="startTimer()">
+   
+    <div id="calc-wrap">
+        <div id="calc">
+            <textarea id=inputVal>0</textarea>
+        </div> 
+        <p><span id="my_timer" style="color: #f00; font-size: 150%; font-weight: bold;">00:02:00</span></p>
+    </div>
+</body>
+</html>
